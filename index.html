@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Replace and change IMG</title>
+  <style>
+    .select-item{display: block;margin: 40px auto;}
+    .replace{display: block;margin: auto;}
+  </style>
+</head>
+<body>
+
+  <select name="speed" id="ya-select" class="select-item">
+    <option value="img/1.jpg">цветы в шляпных коробках москва</option>
+    <option value="img/2.jpg">заказать свадебные букеты в Москве</option>
+    <option value="img/3.jpg">букет к дню рождения спб</option>
+  </select>
+
+  <img src="img/3.jpg" alt="alt" class="replace">
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function(){
+      $(".select-item").change(function(){
+        $("img.replace").attr( "src", $(this).val() );
+      });
+    });
+  </script>
+
+</body>
+</html>
